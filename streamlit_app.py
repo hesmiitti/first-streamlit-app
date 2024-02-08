@@ -49,9 +49,9 @@ streamlit.dataframe(my_data_rows)
 
 streamlit.header("Lisää hedelmä listalle:")
 
-add_my_fruit = streamlit.text_input('Anna uusi lisättävä hedelmä','')
+add_my_fruit = streamlit.text_input('Anna uusi lisättävä hedelmä:','')
 streamlit.write('Kiitos, että lisäsit hedelmän: ', add_my_fruit)
-
+  
 
 
 
