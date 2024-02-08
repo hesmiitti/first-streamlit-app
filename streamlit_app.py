@@ -30,13 +30,10 @@ try:
   if not fruit_choice:
     streamlit.error("Please select fruit!")
   else:
-  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-  # palauttaa json-version datasta ja normalisoi sen 
-  fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-  # tulostaa taulukkona normalisoidun datan
-  streamlit.dataframe(fruityvice_normalized)
-
-  streamlit.write('The user entered fruit', fruit_choice)
+    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+    fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+    streamlit.dataframe(fruityvice_normalized)
+    streamlit.write('The user entered fruit', fruit_choice)
 
 except URLError as e:
   streamlit.error()
