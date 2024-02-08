@@ -38,12 +38,17 @@ streamlit.dataframe(fruityvice_normalized)
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("SELECT * from fruit_load_list")
+my_cur.execute("SELECT * from fruit_load_list order by ")
 my_data_rows = my_cur.fetchall()
 streamlit.header("Fruit_Load_List contains:")
 streamlit.dataframe(my_data_rows)
 
 streamlit.header("Lisää hedelma:")
 add_my_fruit = streamlit.text_input('Anna uusi lisattava hedelma:','')
+(if add_my_fruit <> "":
 my_cur.execute("insert into FRUIT_LOAD_LIST values ('"+add_my_fruit+"')")
+else:
+#nothing
+)
+
 streamlit.write('Kiitos, että lisäsit hedelmän: ', add_my_fruit)
