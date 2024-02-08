@@ -36,9 +36,10 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # tulostaa taulukkona normalisoidun datan
 streamlit.dataframe(fruityvice_normalized)
 
-#my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-#my_cur = my_cnx.cursor()
-#my_cur.execute("SELECT * from fruit_load_list")
-#my_data_rows = my_cur.fetchall()
-#streamlit.header("Fruit_Load_List contains:")
-#streamlit.dataframe(my_data_rows)
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cur = my_cnx.cursor()
+my_cur.execute("SELECT * from fruit_load_list")
+my_data_rows = my_cur.fetchall()
+streamlit.header("Fruit_Load_List contains:")
+streamlit.dataframe(my_data_rows)
+
