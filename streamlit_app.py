@@ -3,7 +3,6 @@ import snowflake.connector
 import pandas
 import requests
 
-streamlit.title('Streamlitin otsikko tässä')
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
 streamlit.text('🥗 Kale, Spinach & Rocket Smoothie')
