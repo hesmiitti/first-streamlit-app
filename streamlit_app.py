@@ -47,13 +47,9 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("Fruit_Load_List contains:")
 streamlit.dataframe(my_data_rows)
 
-streamlit.header("Lisää hedelma")
-
+#streamlit.header("Lisää hedelma")
 
 #add_my_fruit = streamlit.text_input('Anna uusi lisättävä hedelmä:','')
-#my_cur.execute("insert into FRUIT_LOAD_LIST values ('addingia')");
+#my_cur.execute("insert into FRUIT_LOAD_LIST values ('addingia')")
 #streamlit.write('Kiitos, että lisäsit hedelmän: ', add_my_fruit)
   
-
-
-
