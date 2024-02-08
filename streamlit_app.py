@@ -1,4 +1,5 @@
 import streamlit
+import snowflake.connector
 
 streamlit.title('Streamlitin otsikko tässä')
 streamlit.header('Breakfast Menu')
