@@ -69,7 +69,7 @@ if streamlit.button('Add a fruit to the list'):
   streamlit.text(back_from_function)
 
 #my_cur.execute("insert into FRUIT_LOAD_LIST values ('"+add_my_fruit+"')")
-streamlit.write('Kiitos, että lisäsit hedelmän: ', add_my_fruit)
+#streamlit.write('Kiitos, että lisäsit hedelmän: ', add_my_fruit)
 
 
 #my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
